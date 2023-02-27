@@ -1,0 +1,56 @@
+.cratePostPage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+}
+
+.postContainer {
+  background-color: rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 400px;
+  width: 500px;
+  gap: 10px;
+  padding: 0px 40px;
+  -moz-box-shadow: 13px 14px 20px -6px rgba(52, 142, 158, 0.8);
+  -webkit-box-shadow: 13px 14px 20px -6px rgba(52, 142, 158, 0.8);
+  -ms-box-shadow: 13px 14px 20px -6px rgba(52, 142, 158, 0.8);
+  box-shadow: 13px 14px 20px -6px rgba(52, 142, 158, 0.8);
+  border-radius: 10px;
+}
+.postContainer h1 {
+  margin: 0;
+}
+
+.postContainer input {
+  width: 100%;
+  height: 30px;
+  outline: none;
+  padding: 0px 4px;
+}
+
+.postContainer textarea {
+  width: 100%;
+  height: 120px;
+  outline: none;
+  padding: 7px;
+}
+
+.postButton {
+  padding: 10px 0;
+  background-color: darkcyan;
+  cursor: pointer;
+  border: none;
+  -moz-box-shadow: 0px 10px 0px 0px rgba(2, 79, 79, 0.8);
+  -webkit-box-shadow: 0px 10px 0px 0px rgba(2, 79, 79, 0.8);
+  -ms-box-shadow: 0px 10px 0px 0px rgba(2, 79, 79, 0.8);
+  box-shadow: 0px 10px 0px 0px rgba(2, 79, 79, 0.8);
+  transition: all 0.2s;
+}
+
+.postButton:active {
+  transform: translateY(5px);
+  box-shadow: none;
+}
