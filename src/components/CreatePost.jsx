@@ -1,11 +1,11 @@
 import { async } from "@firebase/util";
 import { addDoc, collection } from "firebase/firestore";
-import React, { memo, useState } from "react";
+import React, { memo, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { auth, db } from "../firebase";
 import "./CreatePost.css";
 
-export const CreatePost = memo(() => {
+export const CreatePost = memo(({ isAuth }) => {
   const [title, setTitle] = useState("");
   const [postText, setPostText] = useState("");
   const navigate = useNavigate();
@@ -19,8 +19,12 @@ export const CreatePost = memo(() => {
         id: auth.currentUser.uid,
       },
     });
-    navigate("/")
+    navigate("/");
   };
+
+  useEffect(() => {
+    if (!isAuth) navigate("/login");
+  });
 
   return (
     <div className="cratePostPage">

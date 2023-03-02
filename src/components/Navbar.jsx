@@ -16,12 +16,12 @@ export const Navbar = ({ isAuth }) => {
         <FontAwesomeIcon icon={faHouse} />
         ホーム
       </Link>
-
-      <Link to="/CreatePost">
-        <FontAwesomeIcon icon={faFilePen} />
-        記事投稿
-      </Link>
-
+      {isAuth && (
+        <Link to="/CreatePost">
+          <FontAwesomeIcon icon={faFilePen} />
+          記事投稿
+        </Link>
+      )}
       {!isAuth ? (
         <Link to="/login">
           <FontAwesomeIcon icon={faArrowRightToBracket} />
